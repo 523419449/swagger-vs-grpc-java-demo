@@ -1,0 +1,49 @@
+swagger: '2.0'
+info:
+  title: swagger-vs-grpc-java-demo Hello API
+  description: This is just a simple hello API of demontration purposes.
+  version: "1.0.0"
+schemes:
+  - http
+produces:
+  - application/json
+paths:
+  /hello:
+    get:
+      summary: Hello
+      description: |
+        Send just your name to this endpoint and get a friendly hello message back.
+      parameters:
+      - name: name
+        in: query
+        description: |
+            Your name to create a personalized message out of it.
+        required: true
+        type: string
+      responses:
+        200:
+          description: |
+            A friendly personalized message,
+          schema:
+            $ref: '#/definitions/HelloMessage'
+        default:
+          description: 'Unexepcted error'
+          schema:
+            $ref: '#/definitions/Error'
+definitions:
+  HelloMessage:
+    type: object
+    properties:
+      content:
+        type: string
+        description: Unique identifier for the activity
+  Error:
+    type: object
+    properties:
+      code:
+        type: integer
+        format: int32
+      message:
+        type: string
+      fields:
+        type: string

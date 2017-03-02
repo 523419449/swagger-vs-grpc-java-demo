@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    <logger name="org.springframework.context.annotation.AnnotationConfigApplicationContext" level="WARN"/>
+    <logger name="org.springframework.jmx.export.annotation.AnnotationMBeanExporter" level="WARN"/>
+    <logger name="org.springframework.boot.context.embedded" level="WARN"/>
+    <logger name="org.springframework.context.support" level="WARN"/>
+    <logger name="org.eclipse.jetty" level="WARN"/>
+    <logger name="application" level="WARN"/>
+    <logger name="org.springframework.web.context" level="WARN"/>
+    <logger name="org.springframework.boot.web.servlet.ServletRegistrationBean" level="WARN"/>
+    <logger name="org.springframework.boot.web.servlet.FilterRegistrationBean" level="WARN"/>
+    <logger name="org.springframework.web.servlet.handler" level="WARN"/>
+    <logger name="org.springframework.web.servlet.DispatcherServlet" level="WARN"/>
+    <logger name="springfox.documentation.spring.web" level="WARN"/>
+</configuration>
